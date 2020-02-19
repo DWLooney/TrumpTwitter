@@ -5,4 +5,4 @@
 
 -Run NPM install  
 
--Run NPM Dev Run  
+-Run NPM run dev
