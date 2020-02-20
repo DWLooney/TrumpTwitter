@@ -1,4 +1,9 @@
-# TrumpTwitter
+# TrumpTwitter  
+Database Archive WebApp of tweets from various popular United States democratic/republican candidates  
+Features: Filter by time frame, retweet count, favorite count, primary and secondary terms  (TODO)
+Stack: NextJS using NodeJS and React, MariaDB
+  
+  
 ## TO BUILD
 
 -Download MariaDB
