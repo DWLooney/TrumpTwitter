@@ -6,7 +6,7 @@ Stack: NextJS using NodeJS and React, MariaDB
   
 ## TO BUILD
 
--Download MariaDB
+-Download MariaDB  
 -To run locally, in 'my.ini', add the following line:  
 bind-address = 127.0.0.1
 
