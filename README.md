@@ -5,7 +5,7 @@
 -To run locally, in 'my.ini', add the following line:  
 bind-address = 127.0.0.1
 
--Import trumptweeter.sql to the MariaDB instance
+-Import trumptweeter.sql to the MariaDB instance  
 -Download node.JS with NPM, add NPM to PATH
  
 
