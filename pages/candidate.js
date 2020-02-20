@@ -16,8 +16,8 @@ export default function Candidate(ctx) {
     return (
         <>
         <Layout>
-        <h1> Political Tweeter Prototype V1! </h1>
-        <h2> Tweets from {ctx.name}  </h2>
+        <h1> Political Tweet Archive </h1>
+        <h2><img src={`/static/images/${ctx.name}.png`} style={{width : 100, height: 100}}/>Tweets from {ctx.name}</h2>
             {ctx.data.candidates_info.map(post => (
                 <li key={post.twitter_post_id}>
                     <a> ID: {post.twitter_post_id}</a>

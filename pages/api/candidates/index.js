@@ -1,6 +1,8 @@
 const db = require('../../../lib/db')
 const escape = require('sql-template-strings')
 
+// Potential options for request (req):
+// - WHERE DATE
 module.exports = async (req, res) => {
     const tweets = await db.query(escape`
       SELECT *

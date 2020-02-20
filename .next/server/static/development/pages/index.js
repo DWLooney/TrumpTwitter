@@ -106,9 +106,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\DanLo\\WebstormProjects\\TrumpTwitter\\components\\header.js";
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "C:\\Users\\DWLooney\\WebstormProjects\\TrumpTwitter\\components\\header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 const linkStyle = {
   marginRight: 15
@@ -117,35 +120,62 @@ const linkStyle = {
 const Header = () => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 9
   },
   __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+}, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("title", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "Political Tweet Database"), __jsx("meta", {
+  charSet: "utf-8",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}), __jsx("meta", {
+  name: "viewport",
+  content: "initial-scale=1.0, width=device-width",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+})), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 15
   },
   __self: undefined
 }, __jsx("a", {
   style: linkStyle,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 16
   },
   __self: undefined
 }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/about",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 18
   },
   __self: undefined
 }, __jsx("a", {
   style: linkStyle,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 19
   },
   __self: undefined
 }, "About")));
@@ -166,14 +196,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ "./components/header.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\DanLo\\WebstormProjects\\TrumpTwitter\\components\\myLayout.js";
+var _jsxFileName = "C:\\Users\\DWLooney\\WebstormProjects\\TrumpTwitter\\components\\myLayout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 const layoutStyle = {
   margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+  padding: 20 //border: '1px solid #DDD'
+
 };
 
 const Layout = props => __jsx("div", {
@@ -1884,9 +1914,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/myLayout */ "./components/myLayout.js");
-var _jsxFileName = "C:\\Users\\DanLo\\WebstormProjects\\TrumpTwitter\\pages\\index.js";
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\DWLooney\\WebstormProjects\\TrumpTwitter\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -1902,50 +1935,74 @@ HomePage.getInitialProps = async ({
   return json;
 };
 
-const CLink = props => __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-  href: `/candidate?title=${props.candidate}&id=${props.id}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 16
-  },
-  __self: undefined
-}, __jsx("a", {
-  className: "jsx-344512576",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
-}, props.candidate)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-  id: "344512576",
-  __self: undefined
-}, "h1.jsx-344512576,a.jsx-344512576{font-family:'Arial';}ul.jsx-344512576{padding:0;}li.jsx-344512576{list-style:none;margin:5px 0;}a.jsx-344512576{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-344512576:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRGFuTG9cXFdlYnN0b3JtUHJvamVjdHNcXFRydW1wVHdpdHRlclxccGFnZXNcXGluZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQW1Cb0IsQUFJK0IsQUFJVixBQUlNLEFBS0ssQUFLVCxVQWJkLEVBY0EsSUFWZSxJQVJmLFNBU0EscUJBSWEsV0FDYiIsImZpbGUiOiJDOlxcVXNlcnNcXERhbkxvXFxXZWJzdG9ybVByb2plY3RzXFxUcnVtcFR3aXR0ZXJcXHBhZ2VzXFxpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmZXRjaCBmcm9tICdpc29tb3JwaGljLXVuZmV0Y2gnXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcclxuaW1wb3J0IExheW91dCBmcm9tIFwiLi4vY29tcG9uZW50cy9teUxheW91dFwiO1xyXG5cclxuSG9tZVBhZ2UuZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgKHsgcmVxLCBxdWVyeSB9KSA9PiB7XHJcbiAgICBjb25zdCBwYWdlUmVxdWVzdCA9IGAke1wiaHR0cDpcIn0vLyR7XCJsb2NhbGhvc3Q6MzAwMFwifS9hcGkvY2FuZGlkYXRlcz9saW1pdD0xMGBcclxuICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKHBhZ2VSZXF1ZXN0KVxyXG4gICAgY29uc3QganNvbiA9IGF3YWl0IHJlcy5qc29uKClcclxuICAgIHJldHVybiBqc29uXHJcbn07XHJcblxyXG5cclxuY29uc3QgQ0xpbmsgPSBwcm9wcyA9PiAoXHJcbiAgICA8PlxyXG4gICAgPExpbmsgaHJlZj17YC9jYW5kaWRhdGU/dGl0bGU9JHtwcm9wcy5jYW5kaWRhdGV9JmlkPSR7cHJvcHMuaWR9YH0+XHJcbiAgICAgICAgPGE+e3Byb3BzLmNhbmRpZGF0ZX08L2E+XHJcblxyXG4gICAgPC9MaW5rPlxyXG4gICAgICAgIDxzdHlsZSBqc3g+e2BcclxuICAgICAgICBoMSxcclxuICAgICAgICBhIHtcclxuICAgICAgICAgIGZvbnQtZmFtaWx5OiAnQXJpYWwnO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgdWwge1xyXG4gICAgICAgICAgcGFkZGluZzogMDtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGxpIHtcclxuICAgICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbiAgICAgICAgICBtYXJnaW46IDVweCAwO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgYSB7XHJcbiAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgICAgICBjb2xvcjogYmx1ZTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGE6aG92ZXIge1xyXG4gICAgICAgICAgb3BhY2l0eTogMC42O1xyXG4gICAgICAgIH1cclxuICAgICAgYH08L3N0eWxlPlxyXG4gICAgICAgIDwvPlxyXG4pO1xyXG5cclxuZnVuY3Rpb24gSG9tZVBhZ2UoY3R4KSB7XHJcbiAgICBjb25zb2xlLmxvZyhjdHgpXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDw+XHJcbiAgICAgICAgICAgIDxMYXlvdXQ+XHJcbiAgICAgICAgICAgIDxoMT4gUG9saXRpY2FsIFR3ZWV0ZXIgUHJvdG90eXBlIFYxISA8L2gxPlxyXG4gICAgICAgICAgICA8aDI+IENhbmRpZGF0ZXMgPC9oMj5cclxuICAgICAgICAgICAge2N0eC50d2VldHMubWFwKHBvc3QgPT4gKFxyXG4gICAgICAgICAgICAgICAgPGxpIGtleT17cG9zdC5jYW5kaWRhdGVfaWR9PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDTGluayBjYW5kaWRhdGUgPSB7cG9zdC5jYW5kaWRhdGVfbmFtZX0gaWQgPSB7cG9zdC5jYW5kaWRhdGVfaWR9IC8+XHJcbiAgICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgICAgKSl9XHJcbiAgICAgICAgICAgIDwvTGF5b3V0PlxyXG4gICAgICAgIDwvPlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIb21lUGFnZSJdfQ== */\n/*@ sourceURL=C:\\\\Users\\\\DanLo\\\\WebstormProjects\\\\TrumpTwitter\\\\pages\\\\index.js */"));
-
 function HomePage(ctx) {
-  console.log(ctx);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(_components_myLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx("link", {
+    rel: "shortcut icon",
+    type: "image/x-icon",
+    href: "/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 18
+    },
+    __self: this
+  }), __jsx(_components_myLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 20
     },
     __self: this
-  }, " Political Tweeter Prototype V1! "), __jsx("h2", {
+  }, " ", __jsx("img", {
+    src: "/static/images/logo.png",
+    alt: "Trump Logo",
+    style: {
+      width: 50,
+      height: 50
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 20
     },
     __self: this
-  }, " Candidates "), ctx.tweets.map(post => __jsx("li", {
+  }), " Political Tweet Archive "), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, " Candidates "), ctx.tweets.map(post => __jsx("div", {
     key: post.candidate_id,
+    style: {
+      padding: 20,
+      backgroundColor: '#decddd',
+      float: 'left',
+      border: '1px solid #000'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("img", {
+    src: `/static/images/${post.candidate_name}.png`,
+    style: {
+      width: 100,
+      height: 100
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), __jsx("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: this
   }, __jsx(CLink, {
@@ -1953,11 +2010,30 @@ function HomePage(ctx) {
     id: post.candidate_id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 26
     },
     __self: this
-  })))));
+  }))))));
 }
+
+const CLink = props => __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  href: `/candidate?title=${props.candidate}&id=${props.id}`,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 36
+  },
+  __self: undefined
+}, __jsx("a", {
+  className: "jsx-344512576",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 37
+  },
+  __self: undefined
+}, props.candidate)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  id: "344512576",
+  __self: undefined
+}, "h1.jsx-344512576,a.jsx-344512576{font-family:'Arial';}ul.jsx-344512576{padding:0;}li.jsx-344512576{list-style:none;margin:5px 0;}a.jsx-344512576{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-344512576:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRFdMb29uZXlcXFdlYnN0b3JtUHJvamVjdHNcXFRydW1wVHdpdHRlclxccGFnZXNcXGluZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXVDb0IsQUFJK0IsQUFJVixBQUlNLEFBS0ssQUFLVCxVQWJkLEVBY0EsSUFWZSxJQVJmLFNBU0EscUJBSWEsV0FDYiIsImZpbGUiOiJDOlxcVXNlcnNcXERXTG9vbmV5XFxXZWJzdG9ybVByb2plY3RzXFxUcnVtcFR3aXR0ZXJcXHBhZ2VzXFxpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmZXRjaCBmcm9tICdpc29tb3JwaGljLXVuZmV0Y2gnXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcclxuaW1wb3J0IExheW91dCBmcm9tIFwiLi4vY29tcG9uZW50cy9teUxheW91dFwiO1xyXG5pbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XHJcblxyXG5Ib21lUGFnZS5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyByZXEsIHF1ZXJ5IH0pID0+IHtcclxuICAgIGNvbnN0IHBhZ2VSZXF1ZXN0ID0gYCR7XCJodHRwOlwifS8vJHtcImxvY2FsaG9zdDozMDAwXCJ9L2FwaS9jYW5kaWRhdGVzP2xpbWl0PTEwYFxyXG4gICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2gocGFnZVJlcXVlc3QpXHJcbiAgICBjb25zdCBqc29uID0gYXdhaXQgcmVzLmpzb24oKVxyXG4gICAgcmV0dXJuIGpzb25cclxufTtcclxuXHJcblxyXG5mdW5jdGlvbiBIb21lUGFnZShjdHgpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPD5cclxuICAgICAgICAgICAgPGxpbmsgcmVsPVwic2hvcnRjdXQgaWNvblwiIHR5cGU9XCJpbWFnZS94LWljb25cIiBocmVmPVwiL2Zhdmljb24uaWNvXCIgLz5cclxuICAgICAgICAgICAgPExheW91dD5cclxuICAgICAgICAgICAgPGgxPiA8aW1nIHNyYz1cIi9zdGF0aWMvaW1hZ2VzL2xvZ28ucG5nXCIgYWx0PVwiVHJ1bXAgTG9nb1wiIHN0eWxlPXt7d2lkdGggOiA1MCwgaGVpZ2h0OiA1MH19IC8+IFBvbGl0aWNhbCBUd2VldCBBcmNoaXZlIDwvaDE+XHJcbiAgICAgICAgICAgICAgICA8aDI+IENhbmRpZGF0ZXMgPC9oMj5cclxuICAgICAgICAgICAge2N0eC50d2VldHMubWFwKHBvc3QgPT4gKFxyXG4gICAgICAgICAgICAgICAgPGRpdiBrZXk9e3Bvc3QuY2FuZGlkYXRlX2lkfSBzdHlsZSA9e3twYWRkaW5nOjIwLCBiYWNrZ3JvdW5kQ29sb3I6JyNkZWNkZGQnLCBmbG9hdDogJ2xlZnQnLCBib3JkZXI6ICcxcHggc29saWQgIzAwMCd9fSA+XHJcbiAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9e2Avc3RhdGljL2ltYWdlcy8ke3Bvc3QuY2FuZGlkYXRlX25hbWV9LnBuZ2B9IHN0eWxlPXt7d2lkdGggOiAxMDAsIGhlaWdodDogMTAwfX0vPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoND5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPENMaW5rIGNhbmRpZGF0ZSA9IHtwb3N0LmNhbmRpZGF0ZV9uYW1lfSBpZCA9IHtwb3N0LmNhbmRpZGF0ZV9pZH0gLz5cclxuICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICkpfVxyXG4gICAgICAgICAgICA8L0xheW91dD5cclxuICAgICAgICA8Lz5cclxuICAgIClcclxufVxyXG5jb25zdCBDTGluayA9IHByb3BzID0+IChcclxuICAgIDw+XHJcbiAgICAgICAgPExpbmsgaHJlZj17YC9jYW5kaWRhdGU/dGl0bGU9JHtwcm9wcy5jYW5kaWRhdGV9JmlkPSR7cHJvcHMuaWR9YH0+XHJcbiAgICAgICAgICAgIDxhPntwcm9wcy5jYW5kaWRhdGV9PC9hPlxyXG5cclxuICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPHN0eWxlIGpzeD57YFxyXG4gICAgICAgIGgxLFxyXG4gICAgICAgIGEge1xyXG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdBcmlhbCc7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICB1bCB7XHJcbiAgICAgICAgICBwYWRkaW5nOiAwO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgbGkge1xyXG4gICAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcclxuICAgICAgICAgIG1hcmdpbjogNXB4IDA7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBhIHtcclxuICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgICAgICAgIGNvbG9yOiBibHVlO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgYTpob3ZlciB7XHJcbiAgICAgICAgICBvcGFjaXR5OiAwLjY7XHJcbiAgICAgICAgfVxyXG4gICAgICBgfTwvc3R5bGU+XHJcbiAgICA8Lz5cclxuKTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IEhvbWVQYWdlIl19 */\n/*@ sourceURL=C:\\\\Users\\\\DWLooney\\\\WebstormProjects\\\\TrumpTwitter\\\\pages\\\\index.js */"));
 
 /* harmony default export */ __webpack_exports__["default"] = (HomePage);
 
@@ -1970,7 +2046,7 @@ function HomePage(ctx) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\DanLo\WebstormProjects\TrumpTwitter\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\DWLooney\WebstormProjects\TrumpTwitter\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -2038,6 +2114,17 @@ module.exports = require("core-js/library/fn/weak-map");
 /***/ (function(module, exports) {
 
 module.exports = require("isomorphic-unfetch");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
