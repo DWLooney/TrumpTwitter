@@ -1,20 +1,34 @@
 # TrumpTwitter  
-Database Archive WebApp of tweets from various popular United States democratic/republican candidates  
-Features: Filter by time frame, retweet count, favorite count, primary and secondary terms  (TODO)  
-Stack: NextJS using NodeJS and React, MariaDB
+Database Archive WebApp of tweets from various popular United States Democratic and Republican candidates. 
+
+This app can be used by users that are concerned with the elections of the United States 
+and either want to fact check Twitter posts or simply follow the latest trends of the candidates on Twitter.
+
+Features: Filter by time frame, retweet count, favorite count, primary and secondary terms  (TODO).\
+Stack: NextJS using NodeJS and React, MariaDB, Python
   
   
 ## TO BUILD
--Download node.JS with NPM, add NPM to PATH
+-Download node.JS with NPM, add NPM to PATH.
 
--Download MariaDB  
--To run locally, in 'my.ini', add the following line:  
-  bind-address = 127.0.0.1
+-Download MariaDB.
 
--Import trumptweeter.sql to the MariaDB instance  
+-Download Python 3.
 
--Open with your favorite IDE 
+-For Python dependencies:\
+ pip install mysqlclient\
+ pip install mysql-connector\
+ pip install tweepy
 
--Run NPM install in the root directory
 
--Run NPM run dev in the root directory
+-To run locally, in 'my.ini', add the following line under '[mysqld]':  
+ bind-address = 127.0.0.1
+
+-Import trumptweeter.sql to the MariaDB instance.  
+
+-Open with your favorite IDE.
+
+-Run NPM install in the root directory.
+
+-Run NPM run dev in the root directory.
+
