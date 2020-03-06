@@ -2,3 +2,5 @@
 .next
 /node_modules/
 /.next/
+config.py
+/config.py/
