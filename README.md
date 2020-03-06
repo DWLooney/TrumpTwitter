@@ -4,7 +4,7 @@ Database Archive WebApp of tweets from various popular United States Democratic 
 This app can be used by users that are concerned with the elections of the United States 
 and either want to fact check Twitter posts or simply follow the latest trends of the candidates on Twitter.
 
-Features: Filter by time frame, retweet count, favorite count, primary and secondary terms  (TODO). 
+Features: Filter by time frame, retweet count, favorite count, primary and secondary terms  (TODO).\
 Stack: NextJS using NodeJS and React, MariaDB, Python
   
   
