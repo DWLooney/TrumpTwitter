@@ -16,9 +16,10 @@ Stack: NextJS using NodeJS and React, MariaDB, Python
 -Download Python 3.
 
 -For Python dependencies:\
+ pip install mysqlclient\
  pip install mysql-connector\
- pip install tweepy\
- pip install mysqlclient
+ pip install tweepy
+
 
 -To run locally, in 'my.ini', add the following line under '[mysqld]':  
  bind-address = 127.0.0.1
