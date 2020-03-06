@@ -1,24 +1,58 @@
-import Link from 'next/link';
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link'
+import React from "react";
+import styled from 'styled-components';
 
-const linkStyle = {
-    marginRight: 15
-};
+const LinkStyle = styled.div`
+    ul {
+      list-style-type: none;
+      margin: auto;
+      padding: auto;
+      overflow: auto;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+`;
+
+const StyledLink = styled.a `
+   display: block;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   padding: 14px 16px;
+   float: left;
+   font-size: large;
+   
+   &:hover:not(.active) {
+    background-color: #111;
+   }
+   .active {
+      background-color: #4CAF50;
+   }
+`;
 
 const Header = () => (
-    <div>
+    <>
         <Head>
             <title>Political Tweet Database</title>
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         </Head>
-        <Link href="/">
-            <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/about">
-            <a style={linkStyle}>About</a>
-        </Link>
-    </div>
+        <LinkStyle>
+            <ul>
+                <Link href="/" passHref = {true}>
+                    <StyledLink> Home </StyledLink>
+                </Link>
+                <Link href="/about" passHref={true}>
+                    <StyledLink> About </StyledLink>
+                </Link>
+            </ul>
+        </LinkStyle>
+    </>
+
 );
 
 export default Header;
