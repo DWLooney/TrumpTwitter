@@ -6,8 +6,9 @@ import mysql.connector as mariadb
 import re
 
 #========================================================================================
-# Author: Sam Wainright
-# Date: 2 MAR 2020
+# Author: Sam Wainright, Daniel Looney
+# Date: 6 MAR 2020
+# Version: 1.0.6
 # Description: A Twitter scrapper program that reads from the top of the user timeline
 #              of each potential 2020 Presidential Candidate and commits tweets to
 #              a database with an associated keyword of concern (i.e. "economy").
