@@ -17,19 +17,22 @@ function HomePage(ctx) {
             <Layout>
                 <h1 style = {{background: '#DDD', marginTop: '55px', textAlign: 'center', }}> <img src="/static/images/logo.png" alt="Trump Logo" style={{width : 50, height: 50}} /> Political Tweet Archive </h1>
                 <h2 style = {{textAlign: 'center'}}> Candidates </h2>
-                {ctx.tweets.map(candidate => (
-                   <CLink candidate = {candidate.candidate_name} id = {candidate.candidate_id} />
-                 ))}
+                <div style = {{margin: 'auto', width: '75%'}}>
+                    {ctx.tweets.map(candidate => (
+                        <CLink candidate = {candidate.candidate_name} id = {candidate.twitter_id} />
+                    ))}
+                </div>
+
             </Layout>
         </>
     )
 }
 const CLink = props => (
     <Link href={`/candidate?title=${props.candidate}&id=${props.id}&keyword=None`}>
-        <div key={props.id} style ={{padding:20, backgroundColor:'#decddd', float: 'center', border: '1px solid #000', cursor: 'pointer'}} >
-            <img src={`/static/images/${props.candidate}.png`} style={{width : 100, height: 100}}/>
+        <div key={props.id} style ={{padding:20, margin: '5px', backgroundColor:'#e3667f', float: 'left', border: '1px solid #000', cursor: 'pointer'}} >
+            <img src={`/static/images/${props.candidate}.png`} style={{width : 200, height: 200}}/>
             <h4>
-                <a>{props.candidate}</a>
+                <a style = {{marginLeft: '25px'}}>{props.candidate}</a>
             </h4>
 
             <style jsx>{`

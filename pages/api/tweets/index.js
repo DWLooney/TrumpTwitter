@@ -10,19 +10,19 @@ const escape = require('sql-template-strings')
 // - Need default values for all
 module.exports = async (req, res) => {
     console.log(req.query.keyword);
-    if (req.query.keyword === 'None') {
+    if (req.query.keyword === 'None' || req.query.keyword === '') {
         const candidates_info = await db.query(escape`
         SELECT *
-        FROM tweets
-        WHERE twitter_id = ${req.query.id}
+        FROM tweet_content JOIN tweets ON tweet_content.twitter_post_id = tweets.twitter_post_id
+        WHERE tweets.twitter_id = ${req.query.id}
         `);
         res.status(200).json({candidates_info})
     } else {
         const candidates_info = await db.query(escape`
         SELECT *
-        FROM tweets
-        WHERE twitter_id = ${req.query.id} AND
-        primary_term = ${req.query.keyword}
+        FROM tweet_content JOIN tweets ON tweet_content.twitter_post_id = tweets.twitter_post_id
+        WHERE tweets.twitter_id = ${req.query.id} AND
+        keyword = ${req.query.keyword}
         `);
         console.log(candidates_info);
         res.status(200).json({candidates_info})

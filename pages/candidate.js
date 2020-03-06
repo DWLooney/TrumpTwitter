@@ -3,9 +3,7 @@ import React from "react";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from "../components/myLayout";
-import SearchField from "../components/SearchField"
 import styled from 'styled-components';
-import Link from "next/link";
 import {
     useTable,
     useGroupBy,
@@ -20,7 +18,6 @@ async function fetchData ({req, query})  {
     const pageRequest = `${"http:"}//${"localhost:3000"}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
-    console.log(json);
     return {name: query.title, data: json, id: query.id}
 }
 const TableStyles = styled.div`
@@ -60,9 +57,10 @@ function getTweets(myData) {
     {myData.candidates_info.map(post => (
         data.push(
             {
-                ID: post.twitter_id,
-                Term: post.primary_term,
-                TweetDate: post.tweet_date
+                ID: post.twitter_post_id,
+                Keyword: post.keyword,
+                TweetDate: post.tweet_date,
+                Content: post.tweet_string,
             }
     )))}
     return data;
@@ -123,22 +121,26 @@ function Candidate(ctx) {
                 accessor: 'ID',
             },
             {
-                Header: 'Primary Term',
-                accessor: 'Term',
+                Header: 'Keyword',
+                accessor: 'Keyword',
             },
             {
                 Header: 'Tweet Date',
                 accessor: 'TweetDate'
-            }
+            },
+            {
+                Header: 'Post Content',
+                accessor: 'Content'
+            },
         ],
         []
     );
     const router = useRouter();
     const [value, setName] = useState("");
-    console.log(ctx);
     const handleSubmit = e => {
         e.preventDefault();
         const req = {pathname: '/candidate', query: {title: ctx.name, id: ctx.id, keyword: value}};
+        router.replace(req);
         refresh({query: req.query}).then(r => console.log('Refreshed Data!'));
     };
     const data = getTweets(myData);
