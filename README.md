@@ -13,9 +13,9 @@ Stack: NextJS using NodeJS and React, MariaDB, Python
 
 -Download MariaDB.
 
--Download Python 3.
+-Download Python 3, add Python to PATH (ensure your Python version matches your system architecture, i.e. 64-bit).
 
--For Python dependencies:\
+-For Python dependencies, run in the Python subdirectory:\
  pip install mysqlclient\
  pip install mysql-connector\
  pip install tweepy
