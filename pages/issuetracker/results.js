@@ -4,7 +4,7 @@ import Layout from "../../components/myLayout";
 import Table from "../../components/Table";
 
 Results.getInitialProps = async ({ req, query }) => {
-    const pageRequest = `${"http:"}//${"localhost:3000"}/api/keywordstrength?keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/keywordstrength?keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {data: json, keyword: query.keyword};
