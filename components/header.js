@@ -46,6 +46,9 @@ const Header = () => (
                 <Link href="/" passHref = {true}>
                     <StyledLink> Home </StyledLink>
                 </Link>
+                <Link href="/issuetracker/landing" passHref = {true}>
+                    <StyledLink> Issue Tracker </StyledLink>
+                </Link>
                 <Link href="/about" passHref={true}>
                     <StyledLink> About </StyledLink>
                 </Link>

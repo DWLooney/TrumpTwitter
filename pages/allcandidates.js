@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from "../components/myLayout";
 import Table from "../components/Table";
-import styled from 'styled-components';
 import {
     useTable,
     useGroupBy,
@@ -16,7 +15,7 @@ import {
 
 
 async function fetchData ({req, query})  {
-    const pageRequest = `${"http:"}//${"localhost:3000"}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:3000"}/api/tweets?id=0&keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {name: query.title, data: json, id: query.id}
@@ -26,13 +25,13 @@ async function fetchData ({req, query})  {
 function getTweets(myData) {
 
     let data = [];
-    {myData.candidates_info.map(post => (
+    {myData.allTweets.map(post => (
         data.push(
             {
-                ID: post.twitter_post_id,
+                Name: post.name,
                 Keyword: post.keyword,
                 TweetDate: post.tweet_date,
-                Content: post.tweet_string,
+                Content: post.content,
             }
     )))}
     return data;
@@ -50,8 +49,8 @@ function Candidate(ctx) {
     const columns = React.useMemo(
         () => [
             {
-                Header: 'Post ID',
-                accessor: 'ID',
+                Header: 'Candidate Name',
+                accessor: 'Name',
             },
             {
                 Header: 'Keyword',
@@ -72,7 +71,7 @@ function Candidate(ctx) {
     const [value, setName] = useState("");
     const handleSubmit = e => {
         e.preventDefault();
-        const req = {pathname: '/candidate', query: {title: ctx.name, id: ctx.id, keyword: value}};
+        const req = {pathname: '/allcandidates', query: {title: ctx.name, id: ctx.id, keyword: value}};
         router.replace(req);
         refresh({query: req.query}).then(r => console.log('Refreshed Data!'));
     };
@@ -80,8 +79,8 @@ function Candidate(ctx) {
     return (
         <Layout>
                 <h2 style = {{textAlign: 'left', margin: 'auto'}}>
-                    <img src={`/static/images/${ctx.name}.png`} style={{width : 150, height: 150, padding: '10px', margin: 'auto', marginTop: '100px', float: 'center'}} />
-                    Tweets from {ctx.name}
+                    <img src={`/static/images/All Candidates.png`} style={{width : 150, height: 150, padding: '10px', margin: 'auto', marginTop: '100px', float: 'center'}} />
+                    Tweets from All Candidates
                 </h2>
             <form onSubmit={handleSubmit}>
                 <label>

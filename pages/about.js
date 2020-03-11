@@ -5,11 +5,11 @@ export default function About() {
     return (
         <>
             <Layout>
-            <h2 style = {{marginTop: '50px'}}>Created By: </h2>
-            <h3>-Daniel</h3>
-            <h3>-Adam</h3>
-            <h3>-Sam</h3>
-            <h3>-Nazim</h3>
+            <h1 style = {{marginTop: '50px', textAlign: 'center'}}>Created By: </h1>
+            <h2 style = {{textAlign: 'center'}}>Daniel</h2>
+            <h2 style = {{textAlign: 'center'}}>Adam</h2>
+            <h2 style = {{textAlign: 'center'}}>Sam</h2>
+            <h2 style = {{textAlign: 'center'}}>Nazim</h2>
             </Layout>
         </>
     )

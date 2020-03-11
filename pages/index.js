@@ -4,7 +4,7 @@ import Link from "next/link";
 import Layout from "../components/myLayout";
 
 HomePage.getInitialProps = async ({ req, query }) => {
-    const pageRequest = `${"http:"}//${"localhost:3000"}/api/candidates?limit=10`
+    const pageRequest = `${"http:"}//${"localhost:3000"}/api/candidates?`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return json
@@ -19,8 +19,9 @@ function HomePage(ctx) {
                 <h2 style = {{textAlign: 'center'}}> Candidates </h2>
                 <div style = {{margin: 'auto', width: '75%'}}>
                     {ctx.tweets.map(candidate => (
-                        <CLink candidate = {candidate.candidate_name} id = {candidate.twitter_id} />
+                        <CLink candidate = {candidate.candidate_name} id = {candidate.twitter_id} page = 'candidate'/>
                     ))}
+                    <CLink candidate = {'All Candidates'} id = {0} page = 'allcandidates'/>
                 </div>
 
             </Layout>
@@ -28,7 +29,7 @@ function HomePage(ctx) {
     )
 }
 const CLink = props => (
-    <Link href={`/candidate?title=${props.candidate}&id=${props.id}&keyword=None`}>
+    <Link href={`${props.page}?title=${props.candidate}&id=${props.id}&keyword=None`}>
         <div key={props.id} style ={{padding:20, margin: '5px', backgroundColor:'#e3667f', float: 'left', border: '1px solid #000', cursor: 'pointer'}} >
             <img src={`/static/images/${props.candidate}.png`} style={{width : 200, height: 200}}/>
             <h4>

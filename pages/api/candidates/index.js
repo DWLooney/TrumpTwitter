@@ -8,7 +8,6 @@ module.exports = async (req, res) => {
       SELECT *
       FROM candidates
       ORDER BY candidate_id
-      LIMIT ${parseInt(req.query.limit)}
     `);
     res.status(200).json({ tweets })
 
