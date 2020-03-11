@@ -10,7 +10,7 @@ Landing.getInitialProps = async ({ req, query }) => {
     return json;
 };
 
-
+//Landing page for issue tracker
 function Landing(ctx) {
     console.log(ctx);
     return (

@@ -33,6 +33,8 @@ const StyledLink = styled.a `
    }
 `;
 
+//Renders navbar, also includes general page behavior
+//Will include this component on all pages
 const Header = () => (
     <>
         <Head>

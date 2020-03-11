@@ -3,6 +3,7 @@ import React from 'react';
 import Link from "next/link";
 import Layout from "../components/myLayout";
 
+//Each getInitialProps() in the app makes a request to the api, which asynchronously pulls from SQL database
 HomePage.getInitialProps = async ({ req, query }) => {
     const pageRequest = `${"http:"}//${"localhost:8080"}/api/candidates?`;
     const res = await fetch(pageRequest);
@@ -10,7 +11,7 @@ HomePage.getInitialProps = async ({ req, query }) => {
     return json
 };
 
-
+//Home page of app, displays candidates
 function HomePage(ctx) {
     return (
         <>
@@ -28,6 +29,8 @@ function HomePage(ctx) {
         </>
     )
 }
+
+//Renders card with candidate name, etc.
 const CLink = props => (
     <Link href={`${props.page}?title=${props.candidate}&id=${props.id}&keyword=None`}>
         <div key={props.id} style ={{padding:20, margin: '5px', backgroundColor:'#e3667f', float: 'left', border: '1px solid #000', cursor: 'pointer'}} >

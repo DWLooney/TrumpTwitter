@@ -1,6 +1,7 @@
 import Header from './header';
 import React from "react";
 
+//Renders navbar
 const layoutStyle = {
     margin: 0,
     padding: 0,

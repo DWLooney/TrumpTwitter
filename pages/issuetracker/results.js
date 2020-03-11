@@ -10,7 +10,7 @@ Results.getInitialProps = async ({ req, query }) => {
     return {data: json, keyword: query.keyword};
 };
 
-
+//Use react-table for results page
 function Results(ctx) {
     console.log(ctx);
     let data = [];

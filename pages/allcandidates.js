@@ -4,15 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from "../components/myLayout";
 import Table from "../components/Table";
-import {
-    useTable,
-    useGroupBy,
-    useFilters,
-    useSortBy,
-    useExpanded,
-    usePagination
-} from 'react-table'
-
 
 async function fetchData ({req, query})  {
     const pageRequest = `${"http:"}//${"localhost:8080"}/api/tweets?id=0&keyword=${query.keyword}`;

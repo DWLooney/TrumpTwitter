@@ -2,6 +2,7 @@ import {useTable, usePagination} from "react-table";
 import React from "react";
 import styled from "styled-components";
 
+//Renders Table component, used for displaying tweet info
 const TableStyles = styled.div`
   padding: 1rem;
   table {
@@ -17,8 +18,9 @@ const TableStyles = styled.div`
         }
       }
     }
-    tr:nth-child(even) {
+    :nth-child(even) {
         background: #dddddd;
+        
       }
     th,
     td {
@@ -55,11 +57,12 @@ export default function Table({ columns, data }) {
         {
             columns,
             data,
-            initialState: { pageIndex: 2 },
+            initialState: { pageIndex: 0 },
         },
         usePagination
     );
     return (
+        //Renders table itself
         <>
         <TableStyles>
             <table {...getTableProps()}>
@@ -74,7 +77,7 @@ export default function Table({ columns, data }) {
                 </thead>
                 <tbody {...getTableBodyProps()}>
                 {page.map((row, i) => {
-                    prepareRow(row)
+                    prepareRow(row);
                     return (
                         <tr {...row.getRowProps()}>
                             {row.cells.map(cell => {
@@ -86,6 +89,7 @@ export default function Table({ columns, data }) {
                 </tbody>
             </table>
         </TableStyles>
+        {/* Behavior to handle pagination*/}
         <div className="pagination">
             <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
                 {'<<'}
@@ -132,4 +136,4 @@ export default function Table({ columns, data }) {
             </div>
         </>
     )
-}
+};

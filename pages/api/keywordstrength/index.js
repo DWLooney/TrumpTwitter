@@ -1,6 +1,7 @@
 const db = require('../../../lib/db');
 const escape = require('sql-template-strings');
 
+//API for requesting keyword strength
 module.exports = async (req, res) => {
     const keyword = await db.query(escape`
         SELECT C.candidate_name AS "name", TC.Keyword AS "Keyword", COUNT(TC.keyword) AS "strength"

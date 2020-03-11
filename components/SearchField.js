@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { useState } from "react";
 
+//Unused for now
 function SearchField({candidate, id, keyword, href}) {
     const router = useRouter();
     const style = {
