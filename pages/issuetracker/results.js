@@ -4,11 +4,7 @@ import Layout from "../../components/myLayout";
 import Table from "../../components/Table";
 
 Results.getInitialProps = async ({ req, query }) => {
-    const protocol = req
-        ? `${req.headers['x-forwarded-proto']}:`
-        : location.protocol;
-    const host = req ? req.headers['x-forwarded-host'] : location.host;
-    const pageRequest = `${protocol}//${host}/api/keywordstrength?keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/keywordstrength?keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {data: json, keyword: query.keyword};

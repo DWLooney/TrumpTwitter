@@ -4,13 +4,19 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from "../components/myLayout";
 import Table from "../components/Table";
+import styled from 'styled-components';
+import {
+    useTable,
+    useGroupBy,
+    useFilters,
+    useSortBy,
+    useExpanded,
+    usePagination
+} from 'react-table'
+
 
 async function fetchData ({req, query})  {
-    const protocol = req
-        ? `${req.headers['x-forwarded-proto']}:`
-        : location.protocol;
-    const host = req ? req.headers['x-forwarded-host'] : location.host;
-    const pageRequest = `${protocol}//${host}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {name: query.title, data: json, id: query.id}

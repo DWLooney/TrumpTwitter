@@ -15,11 +15,7 @@ import {
 
 
 async function fetchData ({req, query})  {
-    const protocol = req
-        ? `${req.headers['x-forwarded-proto']}:`
-        : location.protocol;
-    const host = req ? req.headers['x-forwarded-host'] : location.host;
-    const pageRequest = `${protocol}//${host}/api/tweets?id=0&keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/tweets?id=0&keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {name: query.title, data: json, id: query.id}
