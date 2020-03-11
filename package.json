@@ -4,10 +4,11 @@
   "description": "Trump Twitter database",
   "main": "app.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8080",
+    "gcp-build": "next build",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start -p 8080"
   },
   "author": "",
   "license": "ISC",

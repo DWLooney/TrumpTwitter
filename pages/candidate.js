@@ -16,7 +16,7 @@ import {
 
 
 async function fetchData ({req, query})  {
-    const pageRequest = `${"http:"}//${"localhost:3000"}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/tweets?id=${query.id}&keyword=${query.keyword}`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return {name: query.title, data: json, id: query.id}

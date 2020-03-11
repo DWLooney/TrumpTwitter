@@ -4,7 +4,7 @@ import Link from "next/link";
 import Layout from "../components/myLayout";
 
 HomePage.getInitialProps = async ({ req, query }) => {
-    const pageRequest = `${"http:"}//${"localhost:3000"}/api/candidates?`;
+    const pageRequest = `${"http:"}//${"localhost:8080"}/api/candidates?`;
     const res = await fetch(pageRequest);
     const json = await res.json();
     return json
