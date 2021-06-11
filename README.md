@@ -32,3 +32,10 @@ Stack: NextJS using NodeJS and React, MariaDB, Python
 
 -Run NPM run dev in the root directory.
 
+## Example Screenshots
+![Screenshot 1](https://i.imgur.com/NhLD0AB.png)  
+
+![Screenshot 2](https://i.imgur.com/Avx6yhu.png)
+
+![Screenshot 3](https://i.imgur.com/PK7SMEY.png)
+
